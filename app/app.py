@@ -26,7 +26,7 @@ def home():
         search_results = db.search_results.find({ '$text': {'$search': request.args.get('search')} })
 
         for entry in search_results:
-            flash(entry, 'success')
+             flash(entry, 'success')
 
         # close connection
         client.close()
